@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 #wrapper {
-  height: 100vh;
   display: flex;
   background-color: #344A71;
+  padding: 15px;
+  min-height: 100vh;
 }
 #quote-box {
   width: 600px;
@@ -10,12 +14,14 @@
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   padding: 20px;
+  max-height: 100vh;
 }
 #text{
   text-align: center;
   padding: 20px;
   font-family: 'Caveat', cursive;
   font-size: 35px;
+  max-height: 100vh;
 }
 #author{
   text-align: right;
@@ -34,4 +40,21 @@
   background-color: #44a7e8 !important;
   border: none !important;
   opacity: 0.9 !important;
+}
+@media (max-width: 600px),(max-height: 600px){
+  #text{
+    padding: min(3vw, 3vh);
+    font-size: min(6vw, 6vh);
+  }  
+  #quote-box {
+    padding: min(3vw, 3vh);
+  }
+  #author{
+    padding: min(1.5vw, 1.5vh);
+  }  
+}
+@media (max-width: 400px), (max-height: 400px){
+  #text{
+    font-size: 24px;
+  }  
 }
